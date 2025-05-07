@@ -44,4 +44,4 @@ cdn:
   css_theme:      https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.6/dist/css/bootstrap-theme.min.css
   css_theme_hash: "sha384-PGKM9zwCm3SSzbmcEsNjX99ULBaeYK6yiy2YmsS97DMOC4Q5TUQ3IDsnIKwGXq7s"
   js:             https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.6/dist/js/bootstrap.min.js
-  js_hash:        "sha384-MCNoDBP5n90vg0DcMbqKn9AD1QnHNkHn5ZiDVNqBHYAKxHa/Jlzs7i9RI10tthC4"
+  js_hash:        "sha384-RFZz08nPEnsUcmsiG777g4STt+UmD2VBfFSaAVVrvcPstouq0YdDcQ4zB8fhBW0o"

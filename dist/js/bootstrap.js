@@ -707,7 +707,22 @@ if (typeof jQuery === 'undefined') {
 
     if (!$.support.transition) return complete.call(this)
 
-    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+    // Matches dashed string for camelizing
+    var rmsPrefix = "/^-ms-/"
+    var rdashAlpha = "/-([\da-z])/gi";
+
+    // Used by jQuery.camelCase as callback to replace()
+    function fcamelCase( all, letter ) {
+      return letter.toUpperCase();
+    }
+
+    // Convert dashed to camelCase; used by the css and data modules
+    // Microsoft forgot to hump their vendor prefix (#9572)
+    function camelCase( string ) {
+      return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
+    }
+
+    var scrollSize = camelCase(['scroll', dimension].join('-'))
 
     this.$element
       .one('bsTransitionEnd', $.proxy(complete, this))
